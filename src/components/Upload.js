@@ -4,6 +4,18 @@ import Nav from './Nav';
 
 class Upload extends Component {
 
+  uploadWidget = () => {
+  window.cloudinary.openUploadWidget(
+    { cloud_name: 'dmn20coqc',
+      upload_preset: 'ts4u4coq',
+      tags: ['miniflix'],
+      sources: ['local', 'url', 'google_photos', 'facebook', 'image_search']
+    },
+    function(error, result) {
+        console.log("This is the result of the last upload", result);
+    });
+}
+
   render() {
 
     return (
