@@ -1,4 +1,3 @@
-import { Share } from 'react-twitter-widgets';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Nav from './Nav';
@@ -29,7 +28,7 @@ class Display extends Component {
     return (
       <div>
         <Nav />
-        <h3 className="text-center"> Latest Videos on Miniflix </h3>
+        <h3 className="text-center"> Latest Videos on Alexflix </h3>
         <hr/>
 
         <div className="col-sm-12">
@@ -40,7 +39,6 @@ class Display extends Component {
                     <Video publicId={data.public_id} width="300" height="300" controls></Video>
                   </div>
                   <div> Created at {data.created_at} </div>
-                  <Share url={`http://res.cloudinary.com/unicodeveloper/video/upload/${data.public_id}.mp4`} />
                 </div>
               ))
             }
